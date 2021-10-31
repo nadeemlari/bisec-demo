@@ -9,7 +9,7 @@ resource rg 'Microsoft.Resources/resourceGroups@2021-04-01'={
   }
 }
 
-module vnet 'module/vnet.bicep' ={
+module vnet './vnet.bicep' ={
   name:'vnet-izaan'
   scope: rg
   params:{
@@ -29,7 +29,7 @@ module vnet 'module/vnet.bicep' ={
   }
 }
 
-module bastion 'module/bastion.bicep'={
+module bastion './bastion.bicep'={
   name:'bastion-izaan'
   scope: rg
   params:{
